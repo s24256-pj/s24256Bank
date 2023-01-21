@@ -14,5 +14,23 @@ public class Account {
         this.saldo = saldo;
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo){
+        this.saldo = saldo;
+    }
+
+    @Override
+    public String toString() {
+        return "Konto o id: " + id
+                + " klienta imię: " + name
+                + " nazwisko: " + surname
+                + " posiada kwote w wysokości: " + saldo;
+    }
 }

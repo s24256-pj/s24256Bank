@@ -19,8 +19,27 @@ public class AccountStorage {
 
     public List<Account> getAccountList(){return accountList;}
 
-    public void rejestracjaKlienta(Account account){
+    public Account rejestracjaKlienta(Account account){
+        this.accountList.add(account);
+        return account;
+    }
 
+    public Account getAccountById(int id){
+        for (Account account: this.accountList){
+            if(account.getId() == (id)) {
+                return account;
+            }
+        }
+        return null;
+    }
+
+    public boolean isAccountExist(int id){
+        for(Account account: this.accountList){
+            if(account.getId() == id){
+                return true;
+            }
+        }
+        return false;
     }
 
 
